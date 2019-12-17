@@ -1,0 +1,36 @@
+.new-tweet {
+  width: 80%;
+}
+section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonCounter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top:20px;
+}
+
+.tweet {
+  background: transparent;
+  border: none;
+  border-bottom: 4px solid grey;
+  border-color: grey;
+  height: 35px;
+  font-family: 'Source Sans Pro', sans-serif;
+  resize: none;
+  color:#433E3F;
+  font-size: 0.9em;
+}
+
+.counter {
+  font-family: 'Bungee', cursive;
+}
+
+input {
+  background-color: #3C4F76;
+  color: white;
+  font-family: 'Bungee', cursive;
+}

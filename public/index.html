@@ -4,11 +4,18 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
+    <!-- Fonts -->
+
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap" rel="stylesheet">
+
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -22,7 +29,43 @@
     <nav>
       <span>tweeter</span>
     </nav>
+    <header>
+      <div class="abs">
+      <div class = "figures">
+        <img src="/images/profile-hex.png" alt="My Picture">
+      </div>
+      <div class = "figures" >
+        <h2>Jay Seo</h2>
+      </div>
+    </div>
+    </header>
 
+    <main>
+     
+
+
+      <section class="new-tweet">
+          <h2>Compose Tweet</h2>
+          <form method="POST" action="/tweets">
+            <textarea name="text" placeholder="What are you humming about?" class="tweet"></textarea>
+            <div class="buttonCounter">
+              <input type="submit" value="Tweet"/>
+              <span class="counter">140</span>
+            </div>
+          </form>
+        </section>
+
+<!-- 
+      <p>Lorem Ipsum is the single greatest threat. We are not - we are not keeping up with other websites. Lorem Ipsum best not make any more threats to your website. It will be met with fire and fury like the world has never seen. Does everybody know that pig named Lorem Ipsum? An ‘extremely credible source’ has called my office and told me that Barack Obama’s placeholder text is a fraud.</p>
+     -->
+
+    </main>
+
+
+
+
+
+  
     <!-- Page-specific (main) content here -->
     <main class="container"></main>
   </body>

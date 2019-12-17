@@ -5,6 +5,9 @@
  */
 html {
   box-sizing: border-box;
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 24px;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -14,12 +17,19 @@ html {
  * Global layout stuff
  */
 
-body {
-  color: #545149;
-  background-color: #f4f1ec;
-  font-size: 24px;
-}
-
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+
+
+ main {
+  background-color:#E3E3E3;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+   
+ }
