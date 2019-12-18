@@ -16,12 +16,18 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
+    <script defer type="text/javascript" src="/scripts/client.js"></script>
+    <script defer type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -29,7 +35,7 @@
     <nav>
       <span>tweeter</span>
     </nav>
-    <header>
+    <header class="red-header">
       <div class="abs">
       <div class = "figures">
         <img src="/images/profile-hex.png" alt="My Picture">
@@ -39,34 +45,47 @@
       </div>
     </div>
     </header>
-
-    <main>
-     
-
-
-      <section class="new-tweet">
-          <h2>Compose Tweet</h2>
-          <form method="POST" action="/tweets">
-            <textarea name="text" placeholder="What are you humming about?" class="tweet"></textarea>
-            <div class="buttonCounter">
-              <input type="submit" value="Tweet"/>
-              <span class="counter">140</span>
-            </div>
-          </form>
-        </section>
-
-<!-- 
-      <p>Lorem Ipsum is the single greatest threat. We are not - we are not keeping up with other websites. Lorem Ipsum best not make any more threats to your website. It will be met with fire and fury like the world has never seen. Does everybody know that pig named Lorem Ipsum? An ‘extremely credible source’ has called my office and told me that Barack Obama’s placeholder text is a fraud.</p>
-     -->
-
-    </main>
-
-
-
-
-
   
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+
+        <section class="new-tweet">
+            <h2>Compose Tweet</h2>
+            <form method="POST" action="/tweets">
+              <textarea name="text" placeholder="What are you humming about?" class="tweet"></textarea>
+              <div class="buttonCounter">
+                <input type="submit" value="Tweet"/>
+                <span class="counter">140</span>
+              </div>
+            </form>
+        </section>
+      
+        <section class="tweet-container">
+
+          <article>
+        
+            <header>
+              <div>
+                <img src="/images/profile-hex.png" alt="User image" height= 40px; width=40px>
+                <p>Jay Seo</p>
+              </div>
+              <p class="userid">@Userid</p>
+            </header>
+
+            <section>
+              <p>User tweet goes here.</p>
+            </section>
+
+            <footer>
+              <p>Dec 17th 2019</p>
+              <p>@@@</p>
+            </footer>
+
+
+          </article>
+        </section>
+
+
+    </main>
   </body>
 </html>

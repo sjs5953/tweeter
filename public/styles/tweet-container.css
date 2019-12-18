@@ -1,0 +1,35 @@
+.tweet-container {
+  width: 80%;
+  margin: 30px 0;
+  border:4px solid;
+  padding:0px 15px;
+  transition:all 2s;
+}
+.tweet-container header {
+  display: flex;
+  justify-content: space-between;
+  margin-top:0;
+  /* height:70px */
+}
+.tweet-container header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.userid {
+  color:grey;
+}
+.tweet-container footer {
+  display: flex;
+  justify-content: space-between;
+  font-size:0.5em;
+  padding: 0 1.5px
+}
+.tweet-container section {
+  text-align:start;
+  border-bottom: 3px solid;
+  padding: 10px;
+}
+.tweet-container section p {
+  margin-bottom: 0;
+}
