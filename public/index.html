@@ -27,9 +27,12 @@
     
 
     <!-- App JS -->
+    <script defer type="text/javascript" src="/scripts/toggle.js"></script>
     <script defer type="text/javascript" src="/scripts/client.js"></script>
     <script defer type="text/javascript" src="/scripts/composer-char-counter.js"></script>
     <script defer type="text/javascript" src="/scripts/hover-effect.js"></script>
+   
+    
     
   </head>
 
@@ -37,6 +40,18 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
+      <div>
+
+          <span>
+              <strong>Write</strong> a new tweet
+          </span>
+          
+          <a href="#button" id="button">
+              <img src="/images/arrow.gif" alt="arrow" width="60px" height="30px">
+          </a>
+          
+      </div>
+      
     </nav>
     <header class="red-header">
       <div class="abs">
@@ -53,9 +68,9 @@
     <main class="container">
 
         <section class="new-tweet">
-            <h2>Compose Tweet</h2>
+            <h3>Compose Your Tweet</h3>
             <form method="POST" action="/tweets">
-              <textarea name="text" placeholder="What are you humming about?" class="tweet"></textarea>
+              <textarea name="text" placeholder="What are you humming about?" class="tweet-msg"></textarea>
               <div class="buttonCounter">
                 <input type="submit" value="Tweet"/>
                 <span class="counter">140</span>
@@ -63,16 +78,14 @@
             </form>
         </section>
       
-        <section class="tweet-container">
-
-          <article>
-        
+        <section class="tweet-container" >
+          <!-- <article class="tweets">
             <header>
               <div>
                 <img src="/images/profile-hex.png" alt="User image" height= 40px; width=40px>
                 <p>Jay Seo</p>
               </div>
-              <p class="userid">@Userid</p>
+              t
             </header>
 
             <section>
@@ -83,11 +96,8 @@
               <p>Dec 17th 2019</p>
               <p>@@@</p>
             </footer>
-
-
-          </article>
+          </article> -->
         </section>
-
 
     </main>
   </body>

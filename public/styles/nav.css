@@ -1,20 +1,52 @@
-body nav {
+body {
+  z-index: 1;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color:#E3E3E3
+  }
+
+nav {
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   height: 120px;
   width: 100%;
   background-color: #4056A1;
-  color: #FFFF;
   padding: 1.5em;
   font-family: 'Bungee', cursive;
   top:0;
   bottom: 10px;
   font-size: 40px;
+  display:flex;
+  color: #FFFF;
+  justify-content: space-between
+}
+
+nav div {
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height:40px;
 }
 
 
-body {
-z-index: 1;
-font-family: 'Source Sans Pro', sans-serif;
-background-color:#E3E3E3
+nav div span {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size:0.7em;
+  text-decoration: none;
 }
+nav div a:visited {
+  text-decoration: none;
+  color: #FFFF;
+}
+nav div a {
+  text-decoration: none;
+  color: #FFFF;
+ 
+}
+
+/* body nav */
+
+
+
+

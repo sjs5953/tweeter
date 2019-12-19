@@ -11,4 +11,5 @@ $(document).ready(function() {
     }
     $(".counter").text(counts);
   })
+  
 });

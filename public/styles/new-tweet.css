@@ -1,5 +1,5 @@
 .new-tweet {
-  width: 80%;
+  width: 60%;
 }
 section form {
   display: flex;
@@ -13,7 +13,7 @@ section form {
   margin-top:20px;
 }
 
-.tweet {
+.tweet-msg {
   background: transparent;
   border: none;
   border-bottom: 4px solid grey;
