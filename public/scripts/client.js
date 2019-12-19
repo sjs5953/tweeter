@@ -5,8 +5,6 @@
  */
 
 $(document).ready(function() {
-
-
 function createTweetElement(obj) {
   const name = obj.user.name;
   const avatars = obj.user.avatars;
@@ -23,8 +21,10 @@ function createTweetElement(obj) {
 
   const time = `${hour}:${minute}_${month}.${date}.${year}`;
 
-  const escape = (a) => {
-    return document.createTextNode(a)
+  const escape =  function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
   }
 
 
@@ -40,7 +40,7 @@ function createTweetElement(obj) {
       </header>
 
       <section>
-        <p>${text}</p>
+        <p>${escape(text)}</p>
       </section>
 
       <footer>
@@ -59,15 +59,22 @@ function renderTweets(data) {
 }
 
 
+//alert message hide  
+$(".alert").hide();
+
 // post request
 $("form").on("submit", function(event) {
   event.preventDefault();
   const inputLength = $(this).find(".tweet-msg").val().length;
   const serialized = $(this).serialize();
   if (inputLength <= 0) {
-    alert("You need to put in input!")
+    $(".no-input").slideDown(500);
+    $(".exceed").slideUp(500);
+    $(this).find(".tweet-msg").val("");
   } else if (inputLength > 140) {
-    alert("You have exceeded the limit!")
+    $(".exceed").slideDown(500);
+    $(".no-input").slideUp(500);
+    $(this).find(".tweet-msg").val("");
   } else {
     $.ajax({
       url: '/tweets',
@@ -81,7 +88,8 @@ $("form").on("submit", function(event) {
         const newTweet = createTweetElement(e[l]);
         $('.tweet-container').prepend(newTweet);
         $(this).find(".tweet-msg").val("");
-        $(".new-tweet").slideUp(1000)
+        $(".new-tweet").slideUp(1000);
+        $(".alert").slideUp(1000);
       })
     })
   }

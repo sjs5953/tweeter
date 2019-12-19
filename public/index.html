@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/alert.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -66,7 +67,15 @@
   
     <!-- Page-specific (main) content here -->
     <main class="container">
-
+        <section class="alert exceed">
+          <img src="/images/alert.png" alt="alert" height="30px" width="30px">
+          <p>You have <strong> exceeded </strong>the character limit</p>
+        </section>
+        <section class="alert no-input">
+          <img src="/images/alert.png" alt="alert"
+          height="20px" width="20px">
+          <p>You have <strong>no input</strong> to submit</p>
+        </section>
         <section class="new-tweet">
             <h3>Compose Your Tweet</h3>
             <form method="POST" action="/tweets">
