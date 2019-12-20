@@ -17,7 +17,6 @@
   display: flex;
   justify-content: space-between;
   margin-top:0;
-  /* height:70px */
 }
 .tweets header div {
   display: flex;
@@ -51,17 +50,12 @@
 }
 
 .tweets:hover {
-  box-shadow: 10px 10px grey;
+  box-shadow: 5px 5px grey;
   transition-delay: 1000
 }
 .tweets:hover .userid {
   display: block;
-  animation: fade-in 1s;
-}
-
-.tweets:not(:hover) {
-  display: block;
-  animation: fade-out 1s;
+  animation: fade-in 0.75s;
 }
 
 @keyframes fade-in {
