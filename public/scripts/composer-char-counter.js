@@ -2,14 +2,13 @@ $(document).ready(function() {
   // --- our code goes here ---
 
   //counters
-  $("textarea").on("keyup change",function (e) {
-    let counts = 140-this.value.length;
+  $("textarea").on("keyup change", function(e) {
+    let counts = 140 - this.value.length;
     if (counts < 0) {
-      $(".counter").css({color: "red"})
+      $(".counter").css({ color: "red" });
     } else {
-      $(".counter").css({color: "#433E3F"})
+      $(".counter").css({ color: "#433E3F" });
     }
     $(".counter").text(counts);
-  })
-  
+  });
 });

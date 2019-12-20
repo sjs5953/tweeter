@@ -5,31 +5,29 @@
  */
 
 $(document).ready(function() {
-function createTweetElement(obj) {
-  const name = obj.user.name;
-  const avatars = obj.user.avatars;
-  const handle = obj.user.handle
-  const text = obj.content.text;
+  function createTweetElement(obj) {
+    const name = obj.user.name;
+    const avatars = obj.user.avatars;
+    const handle = obj.user.handle;
+    const text = obj.content.text;
 
-  const fullDate = new Date(obj.created_at)
-  const year = fullDate.getFullYear()
-  const month = fullDate.getMonth();
-  const date = fullDate.getDate()
-  const hour = fullDate.getHours();
-  const minute = fullDate.getMinutes('');
+    const fullDate = new Date(obj.created_at);
+    const year = fullDate.getFullYear();
+    const month = fullDate.getMonth();
+    const date = fullDate.getDate();
+    const hour = fullDate.getHours();
+    const minute = fullDate.getMinutes("");
 
+    const time = `${hour}:${minute}_${month}.${date}.${year}`;
 
-  const time = `${hour}:${minute}_${month}.${date}.${year}`;
+    const escape = function(str) {
+      let div = document.createElement("div");
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
 
-  const escape =  function(str) {
-    let div = document.createElement('div');
-    div.appendChild(document.createTextNode(str));
-    return div.innerHTML;
-  }
-
-
-  let $tweet = $('<article>').addClass('tweets');
-   $tweet.append(`
+    let $tweet = $("<article>").addClass("tweets");
+    $tweet.append(`
     <header>
         <div>
           <img src= ${avatars}
@@ -47,71 +45,66 @@ function createTweetElement(obj) {
         <p>${time}</p>
         <p>@@@</p>
       </footer>
-    `)
+    `);
     return $tweet;
-}
-
-function renderTweets(data) {
-  for (let ele of data) {
-    const tweets = createTweetElement(ele);
-    $('.tweet-container').prepend(tweets); 
-  }  
-}
-
-
-//alert message hide  
-$(".alert").hide();
-
-// post request
-$("form").on("submit", function(event) {
-  event.preventDefault();
-  const inputLength = $(this).find(".tweet-msg").val().length;
-  const serialized = $(this).serialize();
-  if (inputLength <= 0) {
-    $(".no-input").slideDown(500);
-    $(".exceed").slideUp(500);
-    $(this).find(".tweet-msg").val("");
-  } else if (inputLength > 140) {
-    $(".exceed").slideDown(500);
-    $(".no-input").slideUp(500);
-    $(this).find(".tweet-msg").val("");
-  } else {
-    $.ajax({
-      url: '/tweets',
-      method: 'POST',
-      data: serialized
-    })
-    .then((e)=>{
-      $.get("/tweets")
-      .then((e)=>{e
-        let l = e.length-1;
-        const newTweet = createTweetElement(e[l]);
-        $('.tweet-container').prepend(newTweet);
-        $(this).find(".tweet-msg").val("");
-        $(".new-tweet").slideUp(1000);
-        $(".alert").slideUp(1000);
-      })
-    })
   }
- 
+
+  function renderTweets(data) {
+    for (let ele of data) {
+      const tweets = createTweetElement(ele);
+      $(".tweet-container").prepend(tweets);
+    }
+  }
+
+  //alert message hide
+  $(".alert").hide();
+
+  // post request
+  $("form").on("submit", function(event) {
+    event.preventDefault();
+    const inputLength = $(this)
+      .find(".tweet-msg")
+      .val().length;
+    const serialized = $(this).serialize();
+    if (inputLength <= 0) {
+      $(".no-input").slideDown(500);
+      $(".exceed").slideUp(500);
+      $(this)
+        .find(".tweet-msg")
+        .val("");
+    } else if (inputLength > 140) {
+      $(".exceed").slideDown(500);
+      $(".no-input").slideUp(500);
+      $(this)
+        .find(".tweet-msg")
+        .val("");
+    } else {
+      $.ajax({
+        url: "/tweets",
+        method: "POST",
+        data: serialized
+      }).then(() => {
+        $.get("/tweets").then(database => {
+          database;
+          const lastTweet = database.length - 1;
+          const newTweet = createTweetElement(database[lastTweet]);
+          $(".tweet-container").prepend(newTweet);
+          $(this)
+            .find(".tweet-msg")
+            .val("");
+          $(".alert").slideUp(1000);
+        });
+      });
+    }
+  });
+
+  //function for get request
+  function loadTweets() {
+    $.get("/tweets").then(renderTweets);
+  }
+
+  loadTweets();
 });
-
-//function for get request
-function loadTweets() {
-
-  $.get("/tweets")
-    .then(renderTweets)
-}
-
-loadTweets();
-
-
-});
-
-
-
-
-
 
 // $('form').on('submit', function(e){
 //   e.preventDefault();
@@ -119,7 +112,6 @@ loadTweets();
 //   console.log('submitted!', newTweet);
 //   const serialized = $(this).serialize();
 //   console.log("serialized", serialized);
-
 
 //     const inputLength = newTweet.length;
 //   if (inputLength <= 0) {
