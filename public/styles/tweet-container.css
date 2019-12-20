@@ -44,25 +44,15 @@
   margin-bottom: 0;
   overflow-wrap: break-word;
 }
-
-.userid {
-  display: none;  
-}
-
 .tweets:hover {
   box-shadow: 5px 5px grey;
   transition-delay: 1000
 }
-.tweets:hover .userid {
-  display: block;
-  animation: fade-in 0.75s;
+.tweets .userid {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.5s;
 }
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.tweets:hover .userid {
+  opacity: 1;
 }

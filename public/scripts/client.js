@@ -94,10 +94,11 @@ $(document).ready(function() {
           const numOfTweets = database.length;
           const lastTweet = numOfTweets - 1;
           const newTweet = createTweetElement(database[lastTweet]);
-          $(".tweet-container").prepend(newTweet)
-          $(this)
-            .find(".tweet-msg")
-            .val("");
+          $(".tweet-container").prepend(newTweet.css('opacity', 0));
+          setTimeout(() => {
+            $(newTweet).css('opacity',1);
+          }, 300);
+          $(this).find(".tweet-msg").val("");
           $(".alert").slideUp(1000);
           //show the arrow when ther are more than 3 tweets
           if (numOfTweets >= 3) {
