@@ -8,9 +8,10 @@
 .tweets {
   width: 100%;
   margin: 30px 0;
-  border:4px solid;
-  padding:0px 15px;
-  transition:all 2s;
+  border: 4px solid;
+  padding: 3px 15px;
+  transition: all 0.5s;
+  border-radius: 15px;
 }
 .tweets header {
   display: flex;
@@ -22,6 +23,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.tweets header img {
+  margin-right:5px;
 }
 .userid {
   color:grey;
@@ -68,4 +72,3 @@
     opacity: 1;
   }
 }
-
