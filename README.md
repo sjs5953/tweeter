@@ -20,7 +20,11 @@ This clone has been built to show the writer's HTML, CSS, JS, jQuery and AJAX fr
 
 
 ## Screenshots of different views
+Desktop View
+!["Screenshot for sign up page"](https://github.com/sjs5953/tweeter/blob/master/docs/desktop:tablet%20view.png?raw=true)
 
-!["Screenshot for sign up page"](https://github.com/sjs5953/tweeter/blob/master/public/images/alert.png?raw=true)
 
-!["Screenshot for sign up page"]()
+Smartphone View
+!["Screenshot for sign up page"](https://github.com/sjs5953/tweeter/blob/master/docs/smartphone%20view.png?raw=true)
+
+!["Screenshot for sign up page"](https://github.com/sjs5953/tweeter/blob/master/docs/small%20smartphone%20view.png?raw=true)
