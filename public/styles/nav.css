@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   z-index: 1;
   font-family: 'Source Sans Pro', sans-serif;
@@ -14,14 +17,13 @@ nav {
   font-family: 'Bungee', cursive;
   top:0;
   bottom: 10px;
-  font-size: 40px;
+  font-size: 35px;
   display:flex;
   color: #FFFF;
   justify-content: space-between
 }
 
 nav div {
- 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,20 +31,19 @@ nav div {
   height:40px;
 }
 
-
-nav div span {
+.newButton span{
   font-family: 'Source Sans Pro', sans-serif;
-  font-size:0.7em;
+  font-size:1rem;
   text-decoration: none;
+  height: 30px;
 }
-nav div a:visited {
+.newButton a:visited {
   text-decoration: none;
   color: #FFFF;
 }
-nav div a {
+.newButton a {
   text-decoration: none;
   color: #FFFF;
- 
 }
 
 /* body nav */

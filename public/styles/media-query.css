@@ -1,0 +1,93 @@
+/* mobile phone */
+@media only screen and (max-width:419px) {
+  nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .newButton {
+    margin-top:25px
+  }
+  .newButton span {
+    font-size: 0.7rem;
+  }
+  .newButton img {
+    width: 35px;
+    height: 20px;
+  }
+  .figures img {
+    width: 60px;
+    height: 60px;
+  }
+  .figures h3 {
+    font-size:0.65rem;
+  }
+  .red-header {
+    height: 100px;
+  }
+  .container {
+    font-size:0.5rem;
+  }
+}
+@media only screen and (min-width:420px) and (max-width:767px){
+  .title {
+    font-size: 25px;
+  }
+  .newButton span {
+    font-size: 0.8rem;
+  }
+ 
+  .container{
+    font-size: 0.7rem;
+  }
+  .newButton img {
+    width: 40px;
+    height: 25px;
+  }
+}
+
+/* tablet */
+@media only screen and (min-width:768px){
+  .space-keeper {
+    width:25%;
+    float:left;
+  }
+  .red-header {
+    position: fixed;
+    width:25%;
+    height:100vh;
+    justify-content: center;
+  }
+  .container {
+    margin-top: 120px;
+    width:75%;
+    float:right;
+    line-height:100%;
+  }
+  .tweet-container {
+    width:80%;
+  }
+  .container{
+    font-size: 0.9rem;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .newButton span {
+    font-size: 0.9rem;
+  }
+}
+
+/* desktop */
+
+@media only screen and (min-width:1024px) {
+  .tweet-container {
+    width:90%;
+  }
+  .newButton span {
+    font-size:1.1rem;
+  }
+}

@@ -1,6 +1,7 @@
 .new-tweet {
-  width: 60%;
+  width: 80%;
 }
+
 section form {
   display: flex;
   flex-direction: column;

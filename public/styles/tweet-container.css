@@ -1,5 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
 .tweet-container {
-  width: 60%;
+  width: 90%;
 }
 .tweets {
   width: 100%;
@@ -37,3 +41,31 @@
   margin-bottom: 0;
   overflow-wrap: break-word;
 }
+
+.userid {
+  display: none;  
+}
+
+.tweets:hover {
+  box-shadow: 10px 10px grey;
+  transition-delay: 1000
+}
+.tweets:hover .userid {
+  display: block;
+  animation: fade-in 1s;
+}
+
+.tweets:not(:hover) {
+  display: block;
+  animation: fade-out 1s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+

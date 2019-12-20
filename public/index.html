@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
     <link rel="stylesheet" href="/styles/alert.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/media-query.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -31,42 +32,38 @@
     <script defer type="text/javascript" src="/scripts/toggle.js"></script>
     <script defer type="text/javascript" src="/scripts/client.js"></script>
     <script defer type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-    <script defer type="text/javascript" src="/scripts/hover-effect.js"></script>
-   
-    
     
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
-      <div>
-
+    <nav class="menu">
+      <span class="title">tweeter</span>
+      <div class="newButton">
           <span>
               <strong>Write</strong> a new tweet
           </span>
-          
           <a href="#button" id="button">
               <img src="/images/arrow.gif" alt="arrow" width="60px" height="30px">
           </a>
-          
       </div>
-      
     </nav>
-    <header class="red-header">
-      <div class="abs">
-      <div class = "figures">
-        <img src="/images/profile-hex.png" alt="My Picture">
+    <div class="space-keeper">
+      <header class="red-header">
+        <div class="abs">
+        <div class = "figures">
+          <img src="/images/profile-hex.png" alt="My Picture"
+          height="130px" width="130px">
+        </div>
+        <div class = "figures" >
+          <h3>Jay Seo</h3>
+        </div>
       </div>
-      <div class = "figures" >
-        <h2>Jay Seo</h2>
-      </div>
+      </header>
     </div>
-    </header>
   
     <!-- Page-specific (main) content here -->
-    <main class="container">
+    <main class="container" id="top">
         <section class="alert exceed">
           <img src="/images/alert.png" alt="alert" height="30px" width="30px">
           <p>You have <strong> exceeded </strong>the character limit</p>
@@ -88,26 +85,11 @@
         </section>
       
         <section class="tweet-container" >
-          <!-- <article class="tweets">
-            <header>
-              <div>
-                <img src="/images/profile-hex.png" alt="User image" height= 40px; width=40px>
-                <p>Jay Seo</p>
-              </div>
-              t
-            </header>
-
-            <section>
-              <p>User tweet goes here.</p>
-            </section>
-
-            <footer>
-              <p>Dec 17th 2019</p>
-              <p>@@@</p>
-            </footer>
-          </article> -->
         </section>
-
+        <a href="#top">
+          <img src="/images/arrowup.gif" alt="arrow" width="60px" height="60px">
+      </a>
     </main>
+   
   </body>
 </html>
