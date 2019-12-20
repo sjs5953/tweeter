@@ -27,4 +27,5 @@ Desktop View
 Smartphone View
 !["Screenshot for sign up page"](https://github.com/sjs5953/tweeter/blob/master/docs/smartphone%20view.png?raw=true)
 
+Smaller Smartphone View
 !["Screenshot for sign up page"](https://github.com/sjs5953/tweeter/blob/master/docs/small%20smartphone%20view.png?raw=true)

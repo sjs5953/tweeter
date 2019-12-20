@@ -48,22 +48,21 @@
     height: 25px;
   }
 }
-
 /* tablet */
 @media only screen and (min-width:768px){
   .space-keeper {
-    width:25%;
+    width:20%;
     float:left;
   }
   .red-header {
     position: fixed;
-    width:25%;
+    width:20%;
     height:100vh;
     justify-content: center;
   }
   .container {
     margin-top: 120px;
-    width:75%;
+    width:80%;
     float:right;
     line-height:100%;
   }
@@ -84,10 +83,18 @@
 /* desktop */
 
 @media only screen and (min-width:1024px) {
+
   .tweet-container {
     width:90%;
   }
   .newButton span {
     font-size:1.1rem;
+  }
+  .figures img {
+    width: 180px;
+    height: 180px;
+  }
+  .figures h3 {
+    font-size: 1.6rem;
   }
 }
