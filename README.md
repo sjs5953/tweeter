@@ -21,11 +21,17 @@ This clone has been built to show the writer's HTML, CSS, JS, jQuery and AJAX fr
 
 ## Screenshots of different views
 Desktop View
-!["Screenshot for sign up page"](https://github.com/sjs5953/tweeter/blob/master/docs/desktop:tablet%20view.png?raw=true)
+!["Screenshot for sign up page"](https://github.com/sjs5953/tweeter/blob/master/docs/Desktop:tablet%20mode.png?raw=true)
 
 
 Smartphone View
-!["Screenshot for sign up page"](https://github.com/sjs5953/tweeter/blob/master/docs/smartphone%20view.png?raw=true)
+!["Screenshot for sign up page"](https://github.com/sjs5953/tweeter/blob/master/docs/Smartphone%20mode.png?raw=true)
 
-Smaller Smartphone View
-!["Screenshot for sign up page"](https://github.com/sjs5953/tweeter/blob/master/docs/small%20smartphone%20view.png?raw=true)
+Error Message when no input
+!["Screenshot for sign up page"](https://github.com/sjs5953/tweeter/blob/master/docs/error%20message.png?raw=true)
+
+Error Message when limit exceeded
+!["Screenshot for sign up page"](https://github.com/sjs5953/tweeter/blob/master/docs/errormessage2.png?raw=true)
+
+Arrow-up to go back to the top which appears only when there are more than 3 tweets
+!["Screenshot for sign up page"](https://github.com/sjs5953/tweeter/blob/master/docs/arrow%20up.png?raw=true)
