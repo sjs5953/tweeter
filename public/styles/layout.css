@@ -3,6 +3,7 @@
   color: #545149;
   background-color: #E3E3E3;
   font-size: 24px;
+  scroll-behavior: smooth;
 }
 *, *:before, *:after {
   box-sizing: inherit;
