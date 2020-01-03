@@ -35,6 +35,12 @@
     height: 25px;
     width: 25px;
   }
+  .tweets footer p {
+    font-size: 10px;
+  }
+  .tweets .icons i {
+    font-size: 15px;
+  }
 }
 @media only screen and (min-width:420px) and (max-width:767px){
   .title {
@@ -50,6 +56,12 @@
   .newButton img {
     width: 40px;
     height: 25px;
+  }
+  .tweets footer p {
+    font-size: 13px;
+  }
+  .tweets .icons i {
+    font-size: 18px;
   }
 }
 /* tablet */

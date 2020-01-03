@@ -1,4 +1,34 @@
 ////functions
+//time ago
+function timeSince(date) {
+
+  var seconds = Math.floor((new Date() - date) / 1000);
+
+  var interval = Math.floor(seconds / 31536000);
+
+  if (interval >= 1) {
+    return interval + " years ago";
+  }
+  interval = Math.floor(seconds / 2592000);
+  if (interval >= 1) {
+    return interval + " months ago";
+  }
+  interval = Math.floor(seconds / 86400);
+  if (interval >= 1) {
+    return interval + " days ago";
+  }
+  interval = Math.floor(seconds / 3600);
+  if (interval >= 1) {
+    return interval + " hours ago";
+  }
+  interval = Math.floor(seconds / 60);
+  if (interval >= 1) {
+    return interval + " minutes ago";
+  }
+  return "Just now"
+}
+//defining aday in time
+
 
 // take the json object and create an html element
 function createTweetElement(obj) {
@@ -7,15 +37,17 @@ function createTweetElement(obj) {
   const handle = obj.user.handle;
   const text = obj.content.text;
 
-  const fullDate = new Date(obj.created_at);
-  const year = fullDate.getFullYear();
-  const month = fullDate.getMonth();
-  const date = fullDate.getDate();
-  const hour = fullDate.getHours();
-  const minute = fullDate.getMinutes("");
+  // const fullDate = new Date(obj.created_at);
+  // const year = fullDate.getFullYear();
+  // const month = fullDate.getMonth();
+  // const date = fullDate.getDate();
+  // const hour = fullDate.getHours();
+  // const minute = fullDate.getMinutes("");
 
-  const time = `${hour}:${minute}_${month}.${date}.${year}`;
+  // const time = `${hour}:${minute}_${month}.${date}.${year}`;
 
+  const time = timeSince(obj.created_at);
+  
   const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -37,8 +69,13 @@ function createTweetElement(obj) {
     </section>
 
     <footer>
-      <p>${time}</p>
-      <p>@@@</p>
+      
+    <p>${time}</p>
+      <div class="icons">
+        <i class="material-icons">flag</i>
+        <i class="material-icons">refresh</i>
+        <i class="material-icons">thumb_up</i>
+      </div>
     </footer>
   `);
   return tweet;
@@ -69,20 +106,18 @@ $(document).ready(function() {
     event.preventDefault();
     const inputLength = $(this)
       .find(".tweet-msg")
-      .val().length;
+      .val().trim().length;
     const serialized = $(this).serialize();
     if (inputLength <= 0) {
       $(".no-input").slideDown(500);
       $(".exceed").slideUp(500);
       $(this)
         .find(".tweet-msg")
-        .val("");
     } else if (inputLength > 140) {
       $(".exceed").slideDown(500);
       $(".no-input").slideUp(500);
       $(this)
         .find(".tweet-msg")
-        .val("");
     } else {
       $.ajax({
         url: "/tweets",

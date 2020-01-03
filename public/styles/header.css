@@ -1,34 +1,27 @@
 * {
   box-sizing: border-box;
 }
-
 .space-keeper {
   margin-top: 120px;
 }
-
 .figures h3 {
   margin:0;
 }
-
 .red-header {
   height: 200px;
   width: 100%;
   background-color: #B2675E;
   width: 100%;
   color:#FFFF;
-
-
   display:flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   padding: 1.5em;
   text-align: center;
-
 /* using positioning */
   /* position: relative; */
  }
-
  /* .abs {
    position: relative;
    width: 20% ;

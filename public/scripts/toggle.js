@@ -3,11 +3,7 @@ $(document).ready(function() {
   $(".new-tweet").hide();
 
   $("nav a").on("click", function(e) {
-    if(toggle) {
-      toggle = false;
-    } else if(!toggle){
-      toggle = true;
-    };
+    toggle = !toggle;
     if (toggle === true) {
       $(".new-tweet").slideDown(1000);
     } else {

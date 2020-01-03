@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   //counters
   $("textarea").on("keyup change", function(e) {
-    let counts = 140 - this.value.length;
+    const counts = 140 - this.value.length;
     if (counts < 0) {
       $(".counter").css({ color: "red" });
     } else {
